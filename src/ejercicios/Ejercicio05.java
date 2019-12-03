@@ -26,6 +26,7 @@ public class Ejercicio05 {
             suma=a+b+c;
             System.out.println("La suma de "+a+"+"+b+"+"+c+" es "+suma+".");
         }
+        entrada.close();
     }
         
 }

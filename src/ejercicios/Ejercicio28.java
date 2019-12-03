@@ -30,6 +30,6 @@ public class Ejercicio28 {
         } // fin del while
 
 	System.out.println("Ya se han calculado todas las notas.");
-            
+       valor.close();     
    }
 }

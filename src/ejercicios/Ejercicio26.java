@@ -30,6 +30,8 @@ public class Ejercicio26 {
             Scanner texto=new Scanner(System.in);
             leerotro=texto.next();
         } // fin del while
+        valor.close();
+        texto.close();
    }
 }
 

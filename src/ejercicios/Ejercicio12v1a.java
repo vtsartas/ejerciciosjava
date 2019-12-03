@@ -20,6 +20,7 @@ public class Ejercicio12v1a {
             System.out.println("El cuadrado de "+num+" es "+(num*num)+".");
             num=num+1; // añadimos una unidad y volvemos a comprobar
         }
+        entrada.close();
 
    }
 }

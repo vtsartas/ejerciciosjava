@@ -37,5 +37,6 @@ public class Ejercicio11v1b {
         }
         else {
             System.out.println("ERROR: Has introducido tres veces cero.");}
+        entrada.close();
    }
 }

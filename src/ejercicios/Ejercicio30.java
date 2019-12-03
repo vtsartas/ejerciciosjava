@@ -36,7 +36,9 @@ public class Ejercicio30 {
                 System.out.println("\n¿Quieres introducir los datos de una nueva piscina (s/n)?");
                 Scanner texto=new Scanner(System.in);
                 otrocalculo=texto.next();
-        } // fin del while
+		} // fin del while
+		texto.close();
+		valor.close();
    }
 }
 

@@ -86,6 +86,8 @@ public class Ejercicio37 {
                 System.out.println("\n¿Deseas calcular el IMC de otra persona (s/n)?");
                 Scanner texto=new Scanner(System.in);
                 otrocalculo=texto.next();
-        } // fin del while
+		} // fin del while
+		valor.close();
+		texto.close();
    }
 }

@@ -29,5 +29,6 @@ public class Ejercicio10 {
             System.out.println("No puedes acceder al ciclo formativo porque no tienes bachillerato ni has superado la prueba de acceso.");
             }
         }
+        entrada.close();
    }
 }        

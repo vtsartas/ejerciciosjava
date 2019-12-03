@@ -19,5 +19,6 @@ public class Ejercicio07 {
         porc_ninos=(100*num_ninos)/(num_ninos+num_ninas);
         porc_ninas=100-porc_ninos;
         System.out.println("El porcentaje de niños es "+porc_ninos+"% y el de niñas un "+porc_ninas+"%.");
+        entrada.close();
     }        
 }

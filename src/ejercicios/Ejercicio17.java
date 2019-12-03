@@ -27,6 +27,6 @@ public class Ejercicio17 {
 	porceva=(capitaleva*100)/capitaltotal;
 	porceduardo=(capitaleduardo*100)/capitaltotal;
 	System.out.println("Miguel tiene un "+porcmiguel+"% del total, Eva un "+porceva+"% y Eduardo un "+porceduardo+"%.");
-        
+    entrada.close();  
    }
 }

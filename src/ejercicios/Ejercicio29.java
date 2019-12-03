@@ -82,7 +82,7 @@ public class Ejercicio29 {
         else {
             System.out.println("ERROR: El año indicado es incorrecto.");
         }
-
+		valor.close();
             
    }
 }

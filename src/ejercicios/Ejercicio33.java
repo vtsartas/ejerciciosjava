@@ -47,5 +47,7 @@ public class Ejercicio33 {
                 Scanner texto=new Scanner(System.in);
                 otrocalculo=texto.next();
         } // fin del while
+        valor.close();
+        texto.close();
    }
 }

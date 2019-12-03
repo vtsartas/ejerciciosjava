@@ -29,5 +29,6 @@ public class Ejercicio14 {
         
         // Mostramos el resultado
         System.out.println("La suma de los primeros "+n+" números pares es "+suma+".");
+        entrada.close();
    }
 }   

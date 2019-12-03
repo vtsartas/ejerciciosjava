@@ -24,6 +24,7 @@ public class Ejercicio03 {
         else{
             System.out.println("El valor de 'a'("+a+") es IGUAL al de 'b'("+b+").");
         }
+        entrada.close();
     }
         
 }

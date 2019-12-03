@@ -24,5 +24,6 @@ public class Ejercicio09 {
         else {
             System.out.println("El número "+a+" es IMPAR.");
         }
+        entrada.close();
    }
 }        

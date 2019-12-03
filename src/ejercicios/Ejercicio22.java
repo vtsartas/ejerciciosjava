@@ -34,7 +34,7 @@ public class Ejercicio22 {
         // si el número no tiene 3 cifras lo indicamos
         System.out.println("Número incorrecto: tiene más o menos de tres cifras");
         }
-        
+        entrada.close(); 
    }
 }
 

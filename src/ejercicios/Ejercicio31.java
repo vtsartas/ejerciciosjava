@@ -32,5 +32,7 @@ public class Ejercicio31 {
                 Scanner texto=new Scanner(System.in);
                 otrocalculo=texto.next();
         } // fin del while
+        texto.close();
+        valor.close();
    }
 }

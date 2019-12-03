@@ -26,7 +26,7 @@ public class Ejercicio21 {
             coste=85+((consumo-8)*(4.5));
             System.out.println("El recibo es de "+coste+" euros.");
         }
-        
+        entrada.close();  
    }
 }
 

@@ -25,6 +25,6 @@ public class Ejercicio19 {
 
 	System.out.println("El salario básico que le corresponde a este trabajador por realizar "+horas+" horas a "+tarifa+" de coste/hora es de "+sueldobasico+".");
         System.out.println("Su salario bruto será de "+sueldobruto+" y su sueldo neto de "+sueldoneto+".");
-        
+        entrada.close();   
    }
 }

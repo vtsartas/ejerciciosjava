@@ -23,5 +23,6 @@ public class Ejercicio06 {
             raiz=Math.sqrt(a);
             System.out.println("El cuadrado de "+a+" es "+cuadrado+" y su raiz cuadrada "+raiz+".");
         }
+        entrada.close();
     }        
 }

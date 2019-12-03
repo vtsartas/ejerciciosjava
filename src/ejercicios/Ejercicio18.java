@@ -27,6 +27,6 @@ public class Ejercicio18 {
 	ganancias2=ganancias*(acciones2/totalacciones);
 	ganancias3=ganancias*(acciones3/totalacciones);
 	System.out.println("El 1er socio obtiene "+ganancias1+" ganancias, el 2o "+ganancias2+" y el 3o "+ganancias3+".");
-        
+    entrada.close(); 
    }
 }

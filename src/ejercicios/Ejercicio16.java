@@ -42,6 +42,7 @@ public class Ejercicio16 {
 
         // Mostramos por pantalla el número total de lados introducido y su suma (el perímetro)
 	System.out.println("Has introducido datos de un terreno de "+lados+" lados cuyo perímetro es de "+sumalados+".");
-        
+    entrada.close();
+ 
    }
 }

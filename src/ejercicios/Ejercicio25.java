@@ -35,6 +35,7 @@ public class Ejercicio25 {
                     System.out.println("ERROR: Has introducido mal la contraseña 3 veces y el programa ha terminado.");
                 }      
             } // fin del while
+            texto.close();
    }
 }
 

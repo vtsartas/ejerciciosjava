@@ -47,6 +47,8 @@ public class Ejercicio32 {
                 System.out.println("\n¿Quieres ver el importe de una nueva compra del mismo artículo (s/n)?");
                 Scanner texto=new Scanner(System.in);
                 otrocalculo=texto.next();
-        } // fin del while
+		} // fin del while
+		valor.close();
+		texto.close();
    }
 }

@@ -25,6 +25,6 @@ public class Ejercicio20 {
         else {
             System.out.println("Error, la nota es superior a 20");
         }
-        
+        entrada.close();
    }
 }

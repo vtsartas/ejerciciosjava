@@ -49,6 +49,8 @@ public class Ejercicio34 {
                 System.out.println("\n¿Deseas comprobar si otro número es capicúa (s/n)?");
                 Scanner texto=new Scanner(System.in);
                 otrocalculo=texto.next();
-        } // fin del while
+		} // fin del while
+		valor.close();
+		texto.close();
    }
 }

@@ -27,6 +27,7 @@ public class Ejercicio04 {
         else{
             System.out.println("El valor de 'c'("+c+") es el mayor.");
         }
+        entrada.close();
     }
         
 }

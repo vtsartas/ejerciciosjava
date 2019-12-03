@@ -32,6 +32,7 @@ public class Ejercicio15 {
 	else {
 		System.out.println("La media de los "+contador+" números que has introducido es "+(suma/contador)+".");
 	}        
+        entrada.close();
 
    }
 }   

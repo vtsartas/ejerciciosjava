@@ -20,6 +20,7 @@ public class Ejercicio12v1b {
             System.out.println("El cubo de "+num+" es "+(num*num*num)+".");
             num=num+1; // añadimos una unidad y volvemos a comprobar
         }
+        entrada.close();
 
    }
 }

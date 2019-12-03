@@ -44,7 +44,7 @@ public class Ejercicio27 {
 		media=suma/contador; // media=(float)(suma)/(float)(contador);
 		System.out.println("Has introducido "+contador+" números que suman "+suma+". Su media aritmética es "+media+". El mayor ha sido "+maximo+" y el menor "+minimo+".");
 	}
-            
+    valor.close();     
             
    }
 }

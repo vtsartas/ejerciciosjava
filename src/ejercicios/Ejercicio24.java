@@ -42,7 +42,8 @@ public class Ejercicio24 {
 		Scanner texto=new Scanner(System.in);
                 leerotro=texto.next();
             }      
-        
+            entrada.close();
+            texto.close();
    }
 }
 

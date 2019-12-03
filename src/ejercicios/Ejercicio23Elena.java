@@ -31,7 +31,7 @@ public class Ejercicio23Elena {
                 System.out.println("ERROR.");
 
         }
-        
+        entrada.close();
         
    }
 }

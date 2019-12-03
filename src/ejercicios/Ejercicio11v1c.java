@@ -42,5 +42,6 @@ public class Ejercicio11v1c {
         else {
             System.out.println("El número "+num+" es IMPAR.");
             }
+        entrada.close();
     }         
 }

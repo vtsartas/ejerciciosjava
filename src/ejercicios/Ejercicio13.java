@@ -25,6 +25,7 @@ public class Ejercicio13 {
         
         // Mostramos el resultado
         System.out.println("La suma de los primeros "+n+" números naturales es "+suma+".");
+        entrada.close();
    }
 }       
 

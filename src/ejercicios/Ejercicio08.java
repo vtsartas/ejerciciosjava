@@ -22,5 +22,6 @@ public class Ejercicio08 {
             importe=precio*(100-15)/100;
         }
         System.out.println("El precio final es "+importe+" por estar en "+mes_actual+".");
+        entrada.close();
     }        
 }

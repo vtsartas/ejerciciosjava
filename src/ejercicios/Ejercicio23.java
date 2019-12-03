@@ -46,7 +46,7 @@ public class Ejercicio23 {
                 System.out.println("Número incorrecto: tiene cuatro dígitos o más.");
             }
         }
-        
+        entrada.close();
         
    }
 }

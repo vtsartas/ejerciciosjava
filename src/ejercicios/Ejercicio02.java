@@ -19,5 +19,6 @@ public class Ejercicio02 {
         a=b;
         b=c;
         System.out.println("El valor FINAL de 'a' es "+a+" y el de 'b' es "+b+".");
+        entrada.close();
         }
     } 
