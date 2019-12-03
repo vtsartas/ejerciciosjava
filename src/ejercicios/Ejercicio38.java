@@ -38,7 +38,6 @@ public class Ejercicio38 {
 		System.out.println("-------------\n");
                 }
 	}
-        valor.close();
 	texto.close();
    }
 }
