@@ -45,10 +45,8 @@ public class Ejercicio32 {
 		System.out.printf("Importe= %.2f.",importe);
 		
                 System.out.println("\n¿Quieres ver el importe de una nueva compra del mismo artículo (s/n)?");
-                Scanner texto=new Scanner(System.in);
-                otrocalculo=texto.next();
+                otrocalculo=valor.next();
 		} // fin del while
 		valor.close();
-		texto.close();
    }
 }

@@ -39,10 +39,8 @@ public class Ejercicio35v1 {
 		}
 		
                 System.out.println("\n¿Deseas ver el coste de otra venta (s/n)?");
-                Scanner texto=new Scanner(System.in);
-                otrocalculo=texto.next();
+                otrocalculo=valor.next();
         } // fin del while
         valor.close();
-	texto.close();
    }
 }

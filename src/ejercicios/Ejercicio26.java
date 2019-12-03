@@ -12,27 +12,23 @@ public class Ejercicio26 {
         int year;
         String leerotro;
         leerotro="s";
-        
+        Scanner valor=new Scanner(System.in);
         // Mientras digamos que sí seguirá comprobando años
         while (leerotro.equals("s")) {
             System.out.println("Introduce el año del que deseas comprobar si es o no bisiesto: ");
-            Scanner valor=new Scanner(System.in);
             year=valor.nextInt();
                                 
             // Comprobamos según las indicaciones dadas si es o no bisiesto
             if ((year%4==0 && year%100!=0) || (year%100==0 && year%400==0)) {
-		System.out.println("El año "+year+" es bisiesto.");
+		        System.out.println("El año "+year+" es bisiesto.");
             }
             else {
-		System.out.println("El año "+year+" NO es bisiesto.");
+		        System.out.println("El año "+year+" NO es bisiesto.");
             }
             System.out.println("\n¿Deseas comprobar otro año (s/n)?");
-            Scanner texto=new Scanner(System.in);
-            leerotro=texto.next();
+            leerotro=valor.next();
         } // fin del while
         valor.close();
-        texto.close();
    }
 }
-
 

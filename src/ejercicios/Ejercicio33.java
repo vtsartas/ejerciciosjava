@@ -44,10 +44,8 @@ public class Ejercicio33 {
 		System.out.printf("La bicicleta tardará %d horas, %d minutos y %d segundos en realizar el trayecto de %.2f km a %.2f kph.",horas,minutos,segundos,espacio,velocidad);
 		
                 System.out.println("\n\n¿Quieres calcular otro trayecto (s/n)?");
-                Scanner texto=new Scanner(System.in);
-                otrocalculo=texto.next();
+                otrocalculo=valor.next();
         } // fin del while
         valor.close();
-        texto.close();
    }
 }

@@ -13,13 +13,14 @@ public class Ejercicio25 {
 	String password;
         
         intentos=0;
+        Scanner texto=new Scanner(System.in);
         
         System.out.println("Introduce la contraseña. Tienes 3 intentos: ");
         
         // Mientras llevemos menos de tres intentos podremos intentarlo de nuevo
             while (intentos<3) {
                 intentos++;	
-		Scanner texto=new Scanner(System.in);
+		
                 password=texto.next();
                                 
                 // Si acertamos salimos del Mientras evitando que salga ningún mensaje aparte de este

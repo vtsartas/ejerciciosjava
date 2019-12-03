@@ -14,7 +14,7 @@ public class Ejercicio37 {
         boolean edadnormal;
 	String otrocalculo="s";
         
-        Scanner valor=new Scanner(System.in);
+		Scanner valor=new Scanner(System.in);
 
         // Mientras digamos que sí seguirá comprobando
         while (otrocalculo.equals("s")) {
@@ -84,10 +84,10 @@ public class Ejercicio37 {
             
 	
                 System.out.println("\n¿Deseas calcular el IMC de otra persona (s/n)?");
-                Scanner texto=new Scanner(System.in);
-                otrocalculo=texto.next();
-		} // fin del while
-		valor.close();
-		texto.close();
+                otrocalculo=valor.next();
+				
+				
+			} // fin del while
+			valor.close();
    }
 }

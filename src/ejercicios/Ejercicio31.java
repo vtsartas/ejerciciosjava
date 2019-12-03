@@ -29,10 +29,8 @@ public class Ejercicio31 {
                 System.out.printf("Para obtener un %.2f%% en la pieza (coste %.2f) deberás venderla a %.2f.",porcganancia,precio,importe);
 		
                 System.out.println("\n¿Quieres introducir los datos de una nueva pieza (s/n)?");
-                Scanner texto=new Scanner(System.in);
-                otrocalculo=texto.next();
+                otrocalculo=valor.next();
         } // fin del while
-        texto.close();
         valor.close();
    }
 }

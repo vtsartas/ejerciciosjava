@@ -17,7 +17,9 @@ public class Ejercicio24 {
         // indicamos el precio de cada artículo
 	preciobocadillo=1.50;
 	preciocerveza=0.75;
-	preciorefresco=1.05;
+        preciorefresco=1.05;
+        
+        Scanner entrada=new Scanner(System.in);
 
 	total=0; // incializamos el total de caja a cero
         leerotro="s"; // para simplificar, esta vez comprobaremos directamente esta cadena sin usar booleanos
@@ -25,7 +27,6 @@ public class Ejercicio24 {
         // Mientras 'otrocliente' sea true pediremos otra cuenta
             while (leerotro.equals("s")) {
                 System.out.println("Introduce los artículos consumidos por el cliente: ");
-                Scanner entrada=new Scanner(System.in);
                 System.out.println("- Número de bocadillos de jamón: ");
                 bocadillos=entrada.nextInt();
                 System.out.println("- Número de cervezas: ");
@@ -39,11 +40,9 @@ public class Ejercicio24 {
 		System.out.println("El importe de la cuenta de este cliente es "+importe+". El total acumulado es "+total+".");
 
 		System.out.println("\n¿Quieres introducir datos de una nueva cuenta (s/n)?");
-		Scanner texto=new Scanner(System.in);
-                leerotro=texto.next();
+                leerotro=entrada.next();
             }      
             entrada.close();
-            texto.close();
    }
 }
 
