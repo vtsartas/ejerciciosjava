@@ -35,9 +35,10 @@ public class Ejercicio38 {
                     for (op2=1;op2<11;op2++){
                         System.out.printf("%d x %d = %d\n",op1,op2,op1*op2);
                    }
-		System.out.println("-------------\n");
+                System.out.println("-------------\n");
+                valor.close();
                 }
-	}
+        }
 	texto.close();
    }
 }
