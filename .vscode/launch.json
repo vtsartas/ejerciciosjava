@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Ejercicio37",
+            "request": "launch",
+            "mainClass": "ejercicios.Ejercicio37"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PerimetroCircunferencia",
+            "request": "launch",
+            "mainClass": "tema2.PerimetroCircunferencia"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ejercicio38",
             "request": "launch",
             "mainClass": "ejercicios.Ejercicio38"
