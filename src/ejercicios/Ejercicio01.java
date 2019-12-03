@@ -26,6 +26,7 @@ public class Ejercicio01 {
             divide=a/b;
             System.out.println("El resultado de dividir "+a+" entre "+b+" es "+divide+".");
         }
+        entrada.close();
     }
     
 }
