@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - OperadorIncremento",
+            "request": "launch",
+            "mainClass": "tema2.OperadorIncremento"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ejercicio02",
             "request": "launch",
             "mainClass": "ejercicios.Ejercicio02"
