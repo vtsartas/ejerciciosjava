@@ -4,6 +4,13 @@
             "type": "java",
             "name": "CodeLens (Launch) - usaCirculo",
             "request": "launch",
+            "mainClass": "tema2.usaCirculo",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - usaCirculo",
+            "request": "launch",
             "mainClass": "tema3.usaCirculo"
         },
         {
