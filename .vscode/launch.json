@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - UsaVehiculo",
+            "request": "launch",
+            "mainClass": "tema3.UsaVehiculo",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - usaCirculo",
             "request": "launch",
             "mainClass": "tema2.usaCirculo",
