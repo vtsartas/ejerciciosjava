@@ -18,8 +18,6 @@ public class Ejercicio36 {
 		System.out.printf("Año: %d Valor real: %.2f Depreciación acumulada: %.2f.\n",2006+year,valorreal,depreacu);
 		year++;
         }	
-        valor.close();
-		texto.close();
    }
 }
 

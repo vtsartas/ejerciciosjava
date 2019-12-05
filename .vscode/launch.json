@@ -2,6 +2,18 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - usaCirculo",
+            "request": "launch",
+            "mainClass": "tema3.usaCirculo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UsaCirculo",
+            "request": "launch",
+            "mainClass": "tema3.UsaCirculo"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Temperatura",
             "request": "launch",
             "mainClass": "tema2.Temperatura"
