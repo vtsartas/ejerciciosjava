@@ -16,7 +16,8 @@ public class UsaVehiculo{
         
         vehiculo1.setDisponible(true);
 
-        if (vehiculo1.getDisponible()==true){
+        // En la condicional no es necesario poner ""==true" si la función devuelve valores booleanos
+        if (vehiculo1.getDisponible()){
             System.out.println("El vehículo está disponible.");
         }
         else {
