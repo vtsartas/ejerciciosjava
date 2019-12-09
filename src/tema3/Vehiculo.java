@@ -47,5 +47,25 @@ public class Vehiculo {
         this.disponible = disponible;
     }
 
+    
+    // Método que obtiene los datos de un vehículo y los pone en un String
+    public String getAtributos() {
+        // Mejora del ejercicio para que muestro "SÍ" o "No" en la disponibilidad en lugar de 'true' o 'false'
+        String disponibilidad;
+        if (this.disponible){
+            disponibilidad="SÍ";
+        }
+        else{
+            disponibilidad="NO";
+        }
+        // Ejercicio tal cual viene en el libro
+        return "Matrícula: " + this.matricula +
+        " Modelo: " + this.marca + " " + this.modelo +
+        " Color: " + this.color +
+        " Tarifa: " + this.tarifa +
+        " Disponible: " + disponibilidad;
+
+    }
+
 
 } // Fin de la clase 'Vehiculo'
