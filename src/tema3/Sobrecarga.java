@@ -44,7 +44,7 @@ public class Sobrecarga {
         // El siguiente código funciona por casualidad por la forma en que Java almacena las cadenas (String Pool)
         // Si en lugar de recibir 'tipo' por parámetro lo hubiésemos obtenido de un Scanner no funcionaría
         // porque estaría comparando las referencias donde apunten los dos operandos comparados.
-        // Más info: https://www.journaldev.com/797/what-is-java-string-pool
+        // Más info: https://www.arquitecturajava.com/java-string-pool-un-concepto-importante/
 
         /* if (tipo=="dos"){ return num1+num2; }
         else if (tipo=="tres"){ return num1+num2+num3; }
