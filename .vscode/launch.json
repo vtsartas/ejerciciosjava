@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - VariableLocal",
+            "request": "launch",
+            "mainClass": "tema3.VariableLocal",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UsaMatematicas",
+            "request": "launch",
+            "mainClass": "tema3.UsaMatematicas",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - UsaVehiculo",
             "request": "launch",
             "mainClass": "tema3.UsaVehiculo",

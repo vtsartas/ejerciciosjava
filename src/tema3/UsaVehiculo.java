@@ -88,6 +88,8 @@ public class UsaVehiculo{
         // Usamos el método 'getAtributos()' definido en la clase 'Vehiculo'
         System.out.println("Atributos de ''vehiculo3' usando el método 'getAtributos':"+vehiculo3.getAtributos());
 
+        
+
 
 
     } // final del método 'main'
