@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MisVehiculosT4",
+            "request": "launch",
+            "mainClass": "tema4.MisVehiculosT4",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - usaSobrecarga",
             "request": "launch",
             "mainClass": "tema3.usaSobrecarga",
