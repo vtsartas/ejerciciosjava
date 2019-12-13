@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - EjercicioCoche",
+            "request": "launch",
+            "mainClass": "tema4.ejcoche.EjercicioCoche",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - EjercicioLibroInfantil",
+            "request": "launch",
+            "mainClass": "tema4.ejlibro.EjercicioLibroInfantil",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - PruebaHerencia",
             "request": "launch",
             "mainClass": "tema4.PruebaHerencia",
