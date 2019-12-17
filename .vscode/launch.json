@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Condicionales",
+            "request": "launch",
+            "mainClass": "tema6.Condicionales",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ClasesAsociadas",
+            "request": "launch",
+            "mainClass": "tema5.ClasesAsociadas",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ejTriangulo",
             "request": "launch",
             "mainClass": "tema4.triangulo.ejTriangulo",
