@@ -2,7 +2,7 @@ package tema2;
 
 import tema3.Circulo; // importamos la clase del paquete 'tema3'
 
-public class UsaCirculo{
+public class usaCirculo{
     public static void main(String[] args) {
         Circulo circulo1=new Circulo();
         Circulo circulo2=new Circulo();
