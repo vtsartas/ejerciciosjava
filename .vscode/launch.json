@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - CondicionalesBufferRead",
+            "request": "launch",
+            "mainClass": "tema6.CondicionalesBufferRead",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Condicionales",
             "request": "launch",
             "mainClass": "tema6.Condicionales",
