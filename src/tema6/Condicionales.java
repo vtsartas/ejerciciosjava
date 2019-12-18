@@ -73,7 +73,7 @@ public class Condicionales {
     public static String saludoDTN2(int h){
 
         if ((h<0)||(h>23)){
-            return "ERROR: La hora indicada es menor de 0 o mayor de 23";
+            return "ERROR: La hora indicada es menor de 0 o mayor de 23"; // por si se introduce una erronea
         }
         else if ( ( (h>=0)&&(h<7) ) || (h>=20) ){
             return "Buenas noches";
