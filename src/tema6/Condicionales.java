@@ -58,10 +58,27 @@ public class Condicionales {
         int minuto=calendario.get(Calendar.MINUTE); // aprovechamos para mostrar la hora actual con hora:minuto
         System.out.println("Hora actual (formato 24h): "+hora+":"+minuto);
 
-        if ( ( (hora>=0)&&(hora<7) ) || (hora>20) ){
+        if ( ( (hora>=0)&&(hora<7) ) || (hora>=20) ){
             return "Buenas noches"; 
         }
         else if ( (hora>=7) && (hora<13) ) {
+            return "Buenos días";
+        }
+        else {
+            return "Buenas tardes";
+        }
+    } // fin del método 'saludoDTN()'
+
+    // otro método de ejemplo de condiciones anidadas
+    public static String saludoDTN2(int h){
+
+        if ((h<0)||(h>23)){
+            return "ERROR: La hora indicada es menor de 0 o mayor de 23";
+        }
+        else if ( ( (h>=0)&&(h<7) ) || (h>=20) ){
+            return "Buenas noches";
+        }
+        else if ( (h>=7) && (h<13) ) {
             return "Buenos días";
         }
         else {
@@ -102,6 +119,18 @@ public class Condicionales {
             System.out.println("¿Quieres comprobar otra nota? (s/n)");
             otra=valor.next();
         } while (otra.equals("s"));
+
+        // condición doble, variante con el operador condicional
+        String text="";
+        do{
+            System.out.println("(Condición doble, operador condicional) Introduce la nota a comprobar: ");
+            nota=valor.nextInt();
+            text=(nota>=5)?"Aprobado":"Suspenso"; // uso del operador condicional
+            System.out.println(text);
+            System.out.println("¿Quieres comprobar otra nota? (s/n)");
+            otra=valor.next();
+        } while (otra.equals("s"));
+
 
 
         // condición anidada
@@ -163,6 +192,19 @@ public class Condicionales {
             }
 
             System.out.println("¿Quieres comprobar otro día? (s/n)");
+            otra=valor.next();
+        } while (otra.equals("s"));
+
+        // otro ejemplo de mostrar un saludo según la hora del día que se nos indique por consola
+        int horausuario;
+        do{
+            System.out.println("(Condiciones anidadas) Introduce la hora que desees (0-23): ");
+            horausuario=valor.nextInt();
+            
+            // lo comprobamos llamando al método antes definido
+            System.out.println(saludoDTN2(horausuario));
+
+            System.out.println("¿Quieres comprobar el saludo para otra hora? (s/n)");
             otra=valor.next();
         } while (otra.equals("s"));
 
