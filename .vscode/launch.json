@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - AdivinaPistasAI",
             "request": "launch",
             "mainClass": "tema6.AdivinaPistasAI",
+            "projectName": "ejerciciosjava_19b102e6"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AdivinaPistasAI",
+            "request": "launch",
+            "mainClass": "tema6.AdivinaPistasAI",
             "projectName": "ejerciciosjava_986ea8a2"
         },
         {

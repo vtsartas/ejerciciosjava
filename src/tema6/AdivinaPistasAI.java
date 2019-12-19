@@ -1,43 +1,46 @@
 package tema6;
 
-import java.util.Random; // Clase necesario para obtener números aleatorios
-import java.util.Scanner; // Necesario para leer teclado
+import java.util.Random; // Clase necesaria para obtener números aleatorios
 
 public class AdivinaPistasAI {
 
     public static void main(String[] args) {
-        Scanner valor=new Scanner (System.in);
 
-        boolean acierto=false;
+        boolean acierto=false; // será 'true' cuando se acierte el número secreto, saliendo del bucle do-while
                
         Random aleatorio = new Random(); // Creamos un objeto 'aleatorio' de la clase "Random"
-        int numero = aleatorio.nextInt(1000)+1,num=500; // 'numero' tendrá un valor aleatorio del 1 al 10
+        int posibilidades=1000000; // cantidad de números entre los que se elije uno de forma aleatoria
+        int numero = aleatorio.nextInt(posibilidades)+1; // 'numero' es aleatorio entre 1 y 'posibilidades'
+        int num=posibilidades/2; // iniciamos el valor con el que compararemos a 1/2 del total de posibles números
         int intentos=1; // inicializamos el número de intentos.
-        System.out.println("El ordenador tratará de averiguar el número secreto");
+        int aprox=num/2; // valor de aproximación que sumaremos o restaremos para acercarnos al resultado
+        System.out.printf("El ordenador tratará de averiguar el número secreto entre los %d posibles.\n",posibilidades);
         do {
-            System.out.println("INTENTO "+intentos+":");
+            System.out.printf("INTENTO %d. Se comprobará el número %d. Aprox=%d\n",intentos,num,aprox);
 
             if (numero==num){
-                System.out.println("El número secreto era "+numero+". El ordenador has necesitado "+(intentos)+" intentos.");
+                System.out.println("El número secreto era "+numero+". El ordenador ha necesitado "+(intentos)+" intentos.");
                 acierto=true; // así saldremos del bucle
             }
             else{
-                System.out.println("Fallo: el número "+num+" no es el secreto.");
-                if (num<numero){
-                    System.out.println("Pista: el número secreto es "+((numero<num)?"menor":"mayor")+" que el introducido ("+num+").");
-                    num=num-(num/2);
+                System.out.printf("Fallo: el número %d no es el secreto (%d)",num,numero);
+                if (numero<num){
+                    System.out.print("(el número secreto es menor).\n");
+                    num-=aprox;
                 }
                 else{
-                    System.out.println("Pista: el número secreto es "+((numero<num)?"menor":"mayor")+" que el introducido ("+num+").");
-                    num=num+(num/2);
+                    System.out.print("(el número secreto es mayor).\n");
+                    num+=aprox;
                 }
+                
+                // reducimos el valor de aproximación a la mitad redondeando al alza
+                // porque dejaríamos valores sin comprobar
+                aprox=(int)Math.ceil((double)aprox/2);
+
                 intentos++; // si no acertamos, incrementamos el número de intentos en uno
             }
         
         } while(!acierto); // hará el do-while mientras nos queden intentos
-     
-
-        valor.close();
         
     }
 }
