@@ -2,6 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AdivinaPistasAI",
+            "request": "launch",
+            "mainClass": "tema6.AdivinaPistasAI",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AdivinaPistas",
+            "request": "launch",
+            "mainClass": "tema6.AdivinaPistas",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Adivina",
+            "request": "launch",
+            "mainClass": "tema6.Adivina",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - usaMatematicas",
+            "request": "launch",
+            "mainClass": "tema6.usaMatematicas",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Bucles",
+            "request": "launch",
+            "mainClass": "tema6.Bucles",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CondicionalesBufferRead",
             "request": "launch",
             "mainClass": "tema6.CondicionalesBufferRead",
