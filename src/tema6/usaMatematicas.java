@@ -104,7 +104,7 @@ public class usaMatematicas {
 
     // método que usará 'NotaMax()' y 'NotaMin()' para mostrarnos la mayor y menor nota de un array
     public static void UsaMaxMinNotas(){
-        int numalumnos; // número de alumnos de la clase
+        int numalumnos; // número de alumnos de la clase.
         String otraclase; // por si queremos calcular la media de otra clase
         do {
             // preguntamos cuántos alumnos hay

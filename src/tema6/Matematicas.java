@@ -106,7 +106,7 @@ public class Matematicas {
             }
             max=(notasmx[i]>max)?notasmx[i]:max;
         }
-        return max; // devolvemos el mayor valor encontrado
+        return max; // devolvemos el mayor valor encontrado.
 
     }
 
