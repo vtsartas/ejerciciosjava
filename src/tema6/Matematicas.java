@@ -81,5 +81,51 @@ public class Matematicas {
         return maxfact;
     }
 
+    // método para calcular la media de los valores de un array de enteros
+    public static double MediaNotas(int [] notasc){
+        double sumanotas=0; // acumulador del valor total de las notas, inicializado a 0
+        
+        // recorremos el array y vamos acumulando los valores de cada nota
+        for (int i=0;i<notasc.length;i++){
+            sumanotas+=notasc[i];
+            // System.out.printf("Nota del alumno %d es %d. La suma actual es %d\n",(i+1),notasc[i],sumanotas);
+        }
+        return sumanotas/notasc.length; // devolvemos el valor 'double' con la media (la suma de las notas entre el total de estas)
+
+    }
+
+    // método para averiguar el valor máximo en un array de enteros
+    public static int NotaMax(int [] notasmx){
+        int max=0; // almacena el mayor valor
+        
+        // recorremos el array y vamos almacenando el valor en máx si es mayor que el que ya tenía
+        for (int i=0;i<notasmx.length;i++){
+            if (notasmx[i]==10){
+                max=notasmx[i];
+                break;
+            }
+            max=(notasmx[i]>max)?notasmx[i]:max;
+        }
+        return max; // devolvemos el mayor valor encontrado
+
+    }
+
+    // método para averiguar el valor mínimo en un array de enteros
+        public static int NotaMin(int [] notasmin){
+            int min=notasmin[0]; // almacena el menor valor, lo inicializamos con el primer valor del array
+            
+            // recorremos el array y vamos almacenando el valor en min si es menor que el que ya tenía
+            
+            for (int i=1;i<notasmin.length;i++){
+                if (notasmin[i]==0){
+                    min=notasmin[i];
+                    break;
+                }
+                min=(notasmin[i]<min)?notasmin[i]:min;
+            }
+            return min; // devolvemos el menor valor encontrado
+    
+        }
+
     
 }

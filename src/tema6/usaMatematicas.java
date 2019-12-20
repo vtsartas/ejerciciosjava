@@ -74,6 +74,60 @@ public class usaMatematicas {
         System.out.printf("El mayor real ('double') del que podemos calcular es %.0f.\n",Matematicas.MaxFactorialDouble());
     }
 
+    // método que usará 'MediaNotas()' para mostrarnos la media de un array con notas de alumnos
+    public static void UsaMediaNotas(){
+        int numalumnos; // número de alumnos de la clase
+        String otraclase; // por si queremos calcular la media de otra clase
+        do {
+            // preguntamos cuántos alumnos hay
+            System.out.println("¿Cuántos alumnos hay en clase?");
+            numalumnos=readInt(); // leemos con el método propio readInt() la cantidad de alumnos
+            int notas[]=new int[numalumnos]; // creamos un array de enteros que tendrá tantos valores como alumnos haya
+            
+            // vamos recorriendo rellenando el array con valores que leemos de consola mediante el método propio readInt()
+            for(int i=0;i<numalumnos;i++){
+                System.out.printf("Introduce la nota [0 a 10] del alumno número %d: ",(i+1));    
+                notas[i]=readInt();
+            }
+
+            // Mostramos la media llamando al método Matematicas.Medianotas()
+            System.out.printf("La media de las notas indicadas es %.2f.\n",Matematicas.MediaNotas(notas));
+            
+            // preguntamos si se quiere calcular la media de otra clase
+            System.out.println("¿Quieres calcular la media de otra clase? (s/n)");
+            otraclase=readStr(); // leemos un String en la consola con el método propio readStr();
+
+        } while (otraclase.equals("s")); // si el valor leido en consola es "s" pediremos datos de otra clase
+
+    } // fin del método 'UsaMediaNotas()'
+
+
+    // método que usará 'NotaMax()' y 'NotaMin()' para mostrarnos la mayor y menor nota de un array
+    public static void UsaMaxMinNotas(){
+        int numalumnos; // número de alumnos de la clase
+        String otraclase; // por si queremos calcular la media de otra clase
+        do {
+            // preguntamos cuántos alumnos hay
+            System.out.println("¿Cuántos alumnos hay en clase?");
+            numalumnos=readInt(); // leemos con el método propio readInt() la cantidad de alumnos
+            int notas[]=new int[numalumnos]; // creamos un array de enteros que tendrá tantos valores como alumnos haya
+            
+            // vamos recorriendo rellenando el array con valores que leemos de consola mediante el método propio readInt()
+            for(int i=0;i<numalumnos;i++){
+                System.out.printf("Introduce la nota [0 a 10] del alumno número %d: ",(i+1));    
+                notas[i]=readInt();
+            }
+
+            // Mostramos la mayor y menor nota del array
+            System.out.printf("La mayor nota entre las notas indicadas es %d y la menor %d.\n",Matematicas.NotaMax(notas),Matematicas.NotaMin(notas));
+            
+            System.out.println("¿Quieres encontrar la mayor y menor nota de otra clase? (s/n)");
+            otraclase=readStr(); // leemos un String en la consola con el método propio readStr();
+
+        } while (otraclase.equals("s")); // si el valor leido en consola es "s" pediremos datos de otra clase
+
+    } // fin del método 'UsaMediaNotas()'
+
     public static void main(String[] args) {
         
         sc = new Scanner(System.in); // ** es necesario abrir una vez el Scanner, lo haremos en la clase main()
@@ -88,6 +142,8 @@ public class usaMatematicas {
             System.out.println("3. Máximo factorial con 'int'");
             System.out.println("4. Máximo factorial con 'float'");
             System.out.println("5. Máximo factorial con 'double'");
+            System.out.println("6. Media aritmética de las notas indicadas");
+            System.out.println("7. Notas máxima y mínima de un listado dado");
             
             operacion=readInt(); // usamos el método 'readInt()' para leer enteros del Scanner
             
@@ -107,7 +163,13 @@ public class usaMatematicas {
                     break;
                 case 5:
                     UsaMaxFactorialDouble();
+                    break;
+                case 6:
+                    UsaMediaNotas();
                     break;                    
+                case 7:
+                    UsaMaxMinNotas();
+                    break;                 
                 default:
                     System.out.println("ERROR: El número introducido no corresponde a ninguna operación disponible");
                     break;        
