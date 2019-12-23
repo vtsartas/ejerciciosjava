@@ -160,7 +160,49 @@ public class usaMatematicas {
 
         } while (otralista.equals("s")); // si el valor leido en consola es "s" pediremos datos de otra clase
 
-    } // fin del método 'UsaMediaNotas()'
+    } // fin del método 'UsaBuscaNum()'
+
+
+    public static void UsaBuscaNumPos(){
+        int numnumeros; // cantidad de números en el array
+        int valornum; // número a buscar
+        int posicion; // variable para almacenar la posición obtenida con el método (por legibilidad)
+        String otralista,otroval; // por si queremos buscar un valor en otra lista
+        do {
+            // preguntamos de cuántos número queremos el listado
+            System.out.println("¿De cuántos es el listado que quieres introducir?");
+            numnumeros=readInt(); // leemos con el método propio readInt() la cantidad
+            int listadonum[]=new int[numnumeros]; // creamos un array de enteros
+            
+            // vamos recorriendo rellenando el array con valores que leemos de consola mediante el método propio readInt()
+            for(int i=0;i<numnumeros;i++){
+                System.out.printf("Faltan %d valores. Introduce el siguente: ",(numnumeros-i));    
+                listadonum[i]=readInt();
+            }
+
+            do{
+                System.out.printf("¿Qué número deseas buscar en el listado? ");
+                valornum=readInt();
+
+                // Buscamos si está en el listado usando el método 'BuscaNumPos()'
+                // Si está (valor!=-1), mostramos la posición, si no indicamos que no estaba
+                posicion=Matematicas.BuscaNumPos(listadonum,valornum); // obtenemos la posición con nuestro método
+                if (posicion==-1){
+                    System.out.printf("El valor indicado (%d) no está entre los del listado\n",valornum);
+                }
+                else{
+                    System.out.printf("El número indicado (%d) está en la posición %d del listado\n",valornum,(posicion+1));
+                }
+                System.out.println("¿Quieres buscar otro número en esta lista? (s/n)");
+                otroval=readStr();
+            } while (otroval.equals("s")); // si el valor leido en consola es "s" pediremos otro número para buscarlo en la lista creada
+            
+            System.out.println("¿Quieres buscar otro número en otra lista? (s/n)");
+            otralista=readStr(); // leemos un String en la consola con el método propio readStr();
+
+        } while (otralista.equals("s")); // si el valor leido en consola es "s" pediremos datos de otra clase
+
+    } // fin del método 'UsaBuscaNumPos()'
 
     public static void main(String[] args) {
         
@@ -179,6 +221,7 @@ public class usaMatematicas {
             System.out.println("6. Media aritmética de las notas indicadas");
             System.out.println("7. Notas máxima y mínima de un listado dado");
             System.out.println("8. Decir si un valor dado está entre los indicados");
+            System.out.println("9. Decir en qué posición está un valor dado entre los del listado indicado");
             
             operacion=readInt(); // usamos el método 'readInt()' para leer enteros del Scanner
             
@@ -207,6 +250,9 @@ public class usaMatematicas {
                     break;                 
                 case 8:
                     UsaBuscaNum();
+                    break;
+                case 9:
+                    UsaBuscaNumPos();
                     break;
                 default:
                     System.out.println("ERROR: El número introducido no corresponde a ninguna operación disponible");

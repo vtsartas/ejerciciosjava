@@ -205,12 +205,6 @@
         },
         {
             "type": "java",
-            "name": "CodeLens (Launch) - Ejercicio11",
-            "request": "launch",
-            "mainClass": "ejercicios.Ejercicio11"
-        },
-        {
-            "type": "java",
             "name": "CodeLens (Launch) - Ejercicio14",
             "request": "launch",
             "mainClass": "ejercicios.Ejercicio14"

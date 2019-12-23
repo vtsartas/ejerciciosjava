@@ -141,5 +141,18 @@ public class Matematicas {
         return encontrado;
     }
 
+    // método para localizar un valor entre los indicados en un array
+    public static int BuscaNumPos(int [] listanum,int val){
+        int i=0, retorno=-1;
+        do{
+            if (listanum[i]==val){
+                retorno=i;
+                break;
+            }
+            i++;
+        } while (i<listanum.length);
+        return retorno;
+    }
+
     
 }

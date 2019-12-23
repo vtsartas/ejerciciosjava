@@ -9,13 +9,13 @@ public class AdivinaPistasAI {
         boolean acierto=false; // será 'true' cuando se acierte el número secreto, saliendo del bucle do-while
                
         Random aleatorio = new Random(); // Creamos un objeto 'aleatorio' de la clase "Random"
-        int posibilidades=10000000; // cantidad de números entre los que se elije uno de forma aleatoria
-        int numero = aleatorio.nextInt(posibilidades)+1; // 'numero' es aleatorio entre 1 y 'posibilidades'
-        int num=posibilidades/2; // iniciamos el valor con el que compararemos a 1/2 del total de posibles números
+        final int POSIBILIDADES=10000000; // cantidad de números entre los que se elije uno de forma aleatoria
+        int numero = aleatorio.nextInt(POSIBILIDADES)+1; // 'numero' es aleatorio entre 1 y 'posibilidades'
+        int num=POSIBILIDADES/2; // iniciamos el valor con el que compararemos a 1/2 del total de posibles números
         int intentos=1; // inicializamos el número de intentos.
         int aprox=num/2; // valor de aproximación que sumaremos o restaremos para acercarnos al resultado
         String texto="";
-        System.out.printf("El ordenador tratará de averiguar el número secreto entre los %d posibles.\n",posibilidades);
+        System.out.printf("El ordenador tratará de averiguar el número secreto entre los %d posibles.\n",POSIBILIDADES);
         do {
             System.out.printf("INTENTO %d. Se comprobará el número %d. Aprox=%d\n",intentos,num,aprox);
 
