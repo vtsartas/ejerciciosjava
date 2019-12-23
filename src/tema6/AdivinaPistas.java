@@ -30,7 +30,7 @@ public class AdivinaPistas {
         
         } while(intentos>0 && intentos<5); // hará el do-while mientras nos queden intentos
         if (intentos==0){
-            System.out.println("Has agotado todos los intentos. Game over.");
+            System.out.println("\nHas agotado todos los intentos.\nEl número secreto era "+numero+".");
         }        
 
         valor.close();

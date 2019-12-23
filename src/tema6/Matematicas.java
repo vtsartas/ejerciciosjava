@@ -111,21 +111,35 @@ public class Matematicas {
     }
 
     // método para averiguar el valor mínimo en un array de enteros
-        public static int NotaMin(int [] notasmin){
-            int min=notasmin[0]; // almacena el menor valor, lo inicializamos con el primer valor del array
-            
-            // recorremos el array y vamos almacenando el valor en min si es menor que el que ya tenía
-            
-            for (int i=1;i<notasmin.length;i++){
-                if (notasmin[i]==0){
-                    min=notasmin[i];
-                    break;
-                }
-                min=(notasmin[i]<min)?notasmin[i]:min;
+    public static int NotaMin(int [] notasmin){
+        int min=notasmin[0]; // almacena el menor valor, lo inicializamos con el primer valor del array
+        
+        // recorremos el array y vamos almacenando el valor en min si es menor que el que ya tenía
+        
+        for (int i=1;i<notasmin.length;i++){
+            if (notasmin[i]==0){
+                min=notasmin[i];
+                break;
             }
-            return min; // devolvemos el menor valor encontrado
-    
+            min=(notasmin[i]<min)?notasmin[i]:min;
         }
+        return min; // devolvemos el menor valor encontrado
+
+    }
+
+    // método para localizar un valor entre los indicados en un array
+    public static boolean BuscaNum(int [] listanum,int val){
+        int i=0;
+        boolean encontrado=false;
+        do{
+            if (listanum[i]==val){
+                encontrado=true;
+                break;
+            }
+            i++;
+        } while (i<listanum.length);
+        return encontrado;
+    }
 
     
 }

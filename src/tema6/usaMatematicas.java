@@ -128,6 +128,40 @@ public class usaMatematicas {
 
     } // fin del método 'UsaMediaNotas()'
 
+    public static void UsaBuscaNum(){
+        int numnumeros; // cantidad de números en el array
+        int valornum; // número a buscar
+        String otralista,otroval; // por si queremos buscar un valor en otra lista
+        do {
+            // preguntamos de cuántos número queremos el listado
+            System.out.println("¿De cuántos es el listado que quieres introducir?");
+            numnumeros=readInt(); // leemos con el método propio readInt() la cantidad
+            int listadonum[]=new int[numnumeros]; // creamos un array de enteros
+            
+            // vamos recorriendo rellenando el array con valores que leemos de consola mediante el método propio readInt()
+            for(int i=0;i<numnumeros;i++){
+                System.out.printf("Faltan %d valores. Introduce el siguente: ",(numnumeros-i));    
+                listadonum[i]=readInt();
+            }
+
+            do{
+                System.out.printf("¿Qué número deseas buscar en el listado? ");
+                valornum=readInt();
+
+                // Mostramos si está en el listado usando el método 'BuscaNum()'
+                System.out.printf("El número indicado (%d) %s está entre los del listado\n",valornum,(Matematicas.BuscaNum(listadonum,valornum)?"sí":"no"));
+            
+                System.out.println("¿Quieres buscar otro número en esta lista? (s/n)");
+                otroval=readStr();
+            } while (otroval.equals("s")); // si el valor leido en consola es "s" pediremos otro número para buscarlo en la lista creada
+            
+            System.out.println("¿Quieres buscar otro número en otra lista? (s/n)");
+            otralista=readStr(); // leemos un String en la consola con el método propio readStr();
+
+        } while (otralista.equals("s")); // si el valor leido en consola es "s" pediremos datos de otra clase
+
+    } // fin del método 'UsaMediaNotas()'
+
     public static void main(String[] args) {
         
         sc = new Scanner(System.in); // ** es necesario abrir una vez el Scanner, lo haremos en la clase main()
@@ -144,6 +178,7 @@ public class usaMatematicas {
             System.out.println("5. Máximo factorial con 'double'");
             System.out.println("6. Media aritmética de las notas indicadas");
             System.out.println("7. Notas máxima y mínima de un listado dado");
+            System.out.println("8. Decir si un valor dado está entre los indicados");
             
             operacion=readInt(); // usamos el método 'readInt()' para leer enteros del Scanner
             
@@ -170,6 +205,9 @@ public class usaMatematicas {
                 case 7:
                     UsaMaxMinNotas();
                     break;                 
+                case 8:
+                    UsaBuscaNum();
+                    break;
                 default:
                     System.out.println("ERROR: El número introducido no corresponde a ninguna operación disponible");
                     break;        
