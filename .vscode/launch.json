@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - usaMatematicas",
+            "request": "launch",
+            "mainClass": "tema6.usaMatematicas",
+            "projectName": "ejerciciosjava_19b102e6"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - AdivinaPistasAI",
             "request": "launch",
             "mainClass": "tema6.AdivinaPistasAI",
