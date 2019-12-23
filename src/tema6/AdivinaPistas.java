@@ -10,7 +10,8 @@ public class AdivinaPistas {
                
         Random aleatorio = new Random(); // Creamos un objeto 'aleatorio' de la clase "Random"
         int numero = aleatorio.nextInt(100)+1,num; // 'numero' tendrá un valor aleatorio del 1 al 10
-        int intentos=5; // inicializamos el número de intentos.
+        final int MAX_INTENTOS=5;
+        int intentos=MAX_INTENTOS; // inicializamos el número de intentos.
         System.out.println("TIENES 5 INTENTOS PARA ACERTAR EL NÚMERO SECRETO");
         do {
             System.out.println("¿Cuál piensas que es el número secreto (1 al 100)? (Te quedan "+intentos+" intentos).");
