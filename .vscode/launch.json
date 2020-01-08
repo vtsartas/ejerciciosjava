@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - Ejercicios2",
             "request": "launch",
             "mainClass": "ejercicios2.Ejercicios2",
+            "projectName": "ejerciciosjava_19b102e6"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ejercicios2",
+            "request": "launch",
+            "mainClass": "ejercicios2.Ejercicios2",
             "projectName": "ejerciciosjava_986ea8a2"
         },
         {

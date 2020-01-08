@@ -16,7 +16,8 @@ public class Ejercicios2 {
             System.out.print("5. Decir los días que tienen un mes.\n");
             System.out.print("6. Mostrar ordenados dos números.\n");
             System.out.print("7. Mostrar si un número es +/- o par/impar (tres versiones).\n");
-            
+            System.out.print("8. Mostrar cuántos + y - hay en un listado y su media diferenciada.\n");
+
             ejerc=LeeTeclado.readInt();
             switch (ejerc) {
                 
@@ -47,7 +48,11 @@ public class Ejercicios2 {
                 // ejercicio 7 (positivo/negativo y par/impar, tres versiones)
                 case 7:
                     Ejercicio7.ejercicio7();
-                    break;                         
+                    break;
+                // ejercicio 8 (contar positivos/negativos y decir su media diferenciada)
+                case 8:
+                    Ejercicio8.ejercicio8();
+                    break;                      
                 // en caso de que se introduzca un valor que no corresponda con ninguno de los ejercicios                
                 default:
                     System.out.print("ERROR: El número introducido no corresponde a ninguno de los ejercicios.\n");    
