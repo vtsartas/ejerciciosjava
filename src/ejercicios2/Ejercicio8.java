@@ -11,7 +11,7 @@ public class Ejercicio8 {
         int contador;
         int [] numeros=new int[10];
         double mediapos,medianeg;
-        Sumas sumados=new Sumas(0,0,0,0);
+        Sumas sumados=new Sumas(0,0,0,0,0);
         String otro8="";
 
         do{
@@ -43,9 +43,9 @@ public class Ejercicio8 {
     }
 
     public static Sumas sumar(int[] numeros){
-        Sumas retorno=new Sumas(0,0,0,0);
+        Sumas retorno=new Sumas(0,0,0,0,0);
         int i;
-        int sumapos=0,sumaneg=0,contapos=0,contaneg=0;
+        int sumapos=0,sumaneg=0,contapos=0,contaneg=0,contacero=0;
         for (i=0;i<numeros.length;i++){
             if (numeros[i]>0){
                 sumapos+=numeros[i];
@@ -55,10 +55,14 @@ public class Ejercicio8 {
                 sumaneg+=numeros[i];
                 contaneg++;
             }
+            else{
+                contacero++;
+            }
             
         }
         retorno.setContarneg(contaneg);
         retorno.setContarpos(contapos);
+        retorno.setContarceros(contacero);
         retorno.setSumanegativos(sumaneg);
         retorno.setSumapositivos(sumapos);
         return retorno;

@@ -17,6 +17,9 @@ public class Ejercicios2 {
             System.out.print("6. Mostrar ordenados dos números.\n");
             System.out.print("7. Mostrar si un número es +/- o par/impar (tres versiones).\n");
             System.out.print("8. Mostrar cuántos + y - hay en un listado y su media diferenciada.\n");
+            System.out.print("9. Listar en un array y mostrar los primeros 20 números pares.\n");
+            System.out.print("10. Listar en un array y mostrar los primeros 20 números pares.\n");
+            System.out.print("0. SALIR DEL PROGRAMA.\n");
 
             ejerc=LeeTeclado.readInt();
             switch (ejerc) {
@@ -52,7 +55,19 @@ public class Ejercicios2 {
                 // ejercicio 8 (contar positivos/negativos y decir su media diferenciada)
                 case 8:
                     Ejercicio8.ejercicio8();
-                    break;                      
+                    break;
+                // ejercicio 9 (mostrar 20 primeros pares)
+                case 9:
+                    Ejercicio9.ejercicio9();
+                    break;
+                // ejercicio 10 (contar positivos, negativos y ceros)
+                case 10:
+                    Ejercicio10.ejercicio10();
+                    break;
+                // SALIR DEL PROGRAMA
+                case 0:
+                System.exit(0);
+                                       
                 // en caso de que se introduzca un valor que no corresponda con ninguno de los ejercicios                
                 default:
                     System.out.print("ERROR: El número introducido no corresponde a ninguno de los ejercicios.\n");    
