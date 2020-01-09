@@ -36,10 +36,10 @@ public class Ejercicio6 {
                 comodin=num1;
                 num1=num2;
                 num2=comodin;
-                mensaje="Los números ordenados de mayor a menor quedan así: "+num1+", "+num2+".\n";
+                mensaje="Los números ordenados de menor a mayor quedan así: "+num2+", "+num1+".\n";
             }
             else{
-                mensaje="Los números ordenados de mayor a menor quedan así: "+num1+", "+num2+".\n";
+                mensaje="Los números ordenados de menor a mayor quedan así: "+num2+", "+num1+".\n";
             }
             
             System.out.print(mensaje);

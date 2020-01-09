@@ -8,17 +8,17 @@ public class Ejercicios2 {
         LeeTeclado.iniSc(); // ** es necesario abrir una vez el Scanner, lo haremos en la clase main()
         
         do {
-            System.out.print("¿Qué ejercicio deseas ejecutar (introducir el número de ejercicio?\n");
+            System.out.print("¿Qué ejercicio deseas ejecutar (introducir el número de ejercicio)?\n");
             System.out.print("1. Decir si un número es par o impar.\n");
             System.out.print("2. Decir si un carácter está en mayúsculas o minúsculas.\n");
             System.out.print("3. Decir cuál es el mayor de tres números.\n");
             System.out.print("4. Comprobar si una hora facilitada es válida.\n");
             System.out.print("5. Decir los días que tienen un mes.\n");
-            System.out.print("6. Mostrar ordenados dos números.\n");
+            System.out.print("6. Mostrar ordenados de menor a mayor dos números.\n");
             System.out.print("7. Mostrar si un número es +/- o par/impar (tres versiones).\n");
             System.out.print("8. Mostrar cuántos + y - hay en un listado y su media diferenciada.\n");
             System.out.print("9. Listar en un array y mostrar los primeros 20 números pares.\n");
-            System.out.print("10. Listar en un array y mostrar los primeros 20 números pares.\n");
+            System.out.print("10. Mostrar cuántos +,- y ceros hay en un array dado.\n");
             System.out.print("0. SALIR DEL PROGRAMA.\n");
 
             ejerc=LeeTeclado.readInt();
