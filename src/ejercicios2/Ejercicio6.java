@@ -1,5 +1,5 @@
 /* Programa que pida que se introduzcan dos números enteros por teclado
-y muestre los números desde el menor hasta el mayor de los números
+y muestre los números enteros desde el menor hasta el mayor de los números
 introducidos. Los dos números introducidos deben ser distintos.
 Si son iguales se mostrará un mensaje indicandolo y se vuelven a introducir. */
 
@@ -10,15 +10,12 @@ public class Ejercicio6 {
     public static void ejercicio6(){
    
         String otro6="";
-        String mensaje="";
-        int num1,num2,comodin;
-        boolean numsok;
+        int num1,num2,comodin,contador;
 
         do{
-            numsok=false;
             
             do{
-                System.out.print("Introduce los dos números enteros que quieres ordenar:\n");
+                System.out.print("Introduce los dos números enteros entre los que quieres mostrar los que hay:\n");
                 System.out.print("Primero: ");
                 num1=LeeTeclado.readInt();
                 System.out.print("Segundo: ");
@@ -27,24 +24,20 @@ public class Ejercicio6 {
                 if (num1==num2){
                         System.out.print("ERROR: los dos números introducidos son iguales. Vuelve a intentarlo.\n");
                 }
-                else{
-                    numsok=true;
-                }
-            }while(!numsok);
+
+            }while(num1==num2);
             
-            if (num2>num1){
+            if (num2<num1){
                 comodin=num1;
                 num1=num2;
                 num2=comodin;
-                mensaje="Los números ordenados de menor a mayor quedan así: "+num2+", "+num1+".\n";
             }
-            else{
-                mensaje="Los números ordenados de menor a mayor quedan así: "+num2+", "+num1+".\n";
+
+            for (contador=num1;contador<=num2;contador++){
+                System.out.print(contador+" ");
             }
             
-            System.out.print(mensaje);
-            
-            System.out.print("¿Quieres ordenar otros dos números?(s/n) ");
+            System.out.print("\n¿Quieres mostrar otra serie en base a dos números (s/n)? ");
             otro6=LeeTeclado.readStr();
         } while (otro6.equals("s"));
     } // fin del método ejercicio6()

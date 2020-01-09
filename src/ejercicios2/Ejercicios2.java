@@ -13,8 +13,8 @@ public class Ejercicios2 {
             System.out.print("2. Decir si un carácter está en mayúsculas o minúsculas.\n");
             System.out.print("3. Decir cuál es el mayor de tres números.\n");
             System.out.print("4. Comprobar si una hora facilitada es válida.\n");
-            System.out.print("5. Decir los días que tienen un mes.\n");
-            System.out.print("6. Mostrar ordenados de menor a mayor dos números.\n");
+            System.out.print("5. Decir los días que tiene un mes.\n");
+            System.out.print("6. Mostrar la lista de números enteros entre los dos dados.\n");
             System.out.print("7. Mostrar si un número es +/- o par/impar (tres versiones).\n");
             System.out.print("8. Mostrar cuántos + y - hay en un listado y su media diferenciada.\n");
             System.out.print("9. Listar en un array y mostrar los primeros 20 números pares.\n");
@@ -44,7 +44,7 @@ public class Ejercicios2 {
                 case 5:
                     Ejercicio5.ejercicio5();
                     break;
-                // ejercicio 6 (mayor de 2 números)
+                // ejercicio 6 (lista números entre dos dados)
                 case 6:
                     Ejercicio6.ejercicio6();
                     break;
