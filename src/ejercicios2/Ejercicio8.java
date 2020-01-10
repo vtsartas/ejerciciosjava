@@ -26,10 +26,20 @@ public class Ejercicio8 {
             }while(contador<10);
 
             sumados=sumar(numeros);
-            mediapos=(double)sumados.getSumapositivos()/(double)sumados.getContarpos();
-            System.out.printf("Has introducido %d números positivos y su media es %.2f\n",sumados.getContarpos(),mediapos);
-            medianeg=(double)sumados.getSumanegativos()/(double)sumados.getContarneg();
-            System.out.printf("Has introducido %d números negativos y su media es %.2f\n",sumados.getContarneg(),medianeg);
+            if (sumados.getContarpos()!=0){
+                mediapos=(double)sumados.getSumapositivos()/(double)sumados.getContarpos();
+                System.out.printf("Has introducido %d números positivos y su media es %.2f\n",sumados.getContarpos(),mediapos);
+            }
+            else{
+                System.out.printf("No has introducido ningún número positivo.\n");
+            }
+            if (sumados.getContarneg()!=0){
+                medianeg=(double)sumados.getSumanegativos()/(double)sumados.getContarneg();
+                System.out.printf("Has introducido %d números negativos y su media es %.2f\n",sumados.getContarneg(),medianeg);
+            }
+            else{
+                System.out.printf("No has introducido ningún número negativo.\n");
+            }
         
 
             System.out.print("¿Quieres introducir otra serie de 10 números? (s/n) ");

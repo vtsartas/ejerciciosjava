@@ -8,9 +8,10 @@ public class Ejercicio9 {
 
     public static void ejercicio9(){
 
+        final int TOTALPARES=20;
         int contadorpares=0;
         int num=0;
-        int[] listapares=new int[20];
+        int[] listapares=new int[TOTALPARES];
         int i;
 
         do {
@@ -19,9 +20,9 @@ public class Ejercicio9 {
                 contadorpares++;
             }
             num++;
-        }while(contadorpares<20);
+        }while(contadorpares<TOTALPARES);
 
-        for (i=0;i<20;i++){
+        for (i=0;i<TOTALPARES;i++){
             System.out.print(listapares[i]+" ");
         }
         System.out.print("\n");

@@ -10,7 +10,7 @@ public class Ejercicio6 {
     public static void ejercicio6(){
    
         String otro6="";
-        int num1,num2,comodin,contador;
+        int num1,num2,comodin,contador,orden;
 
         do{
             
@@ -32,11 +32,25 @@ public class Ejercicio6 {
                 num1=num2;
                 num2=comodin;
             }
-
-            for (contador=num1;contador<=num2;contador++){
-                System.out.print(contador+" ");
-            }
             
+            System.out.print("¿En qué orden quieres mostrar los números?\n");
+            System.out.print("1. De menor a mayor.\n");
+            System.out.print("2. De mayor a menor.\n");
+            do {
+                orden=LeeTeclado.readInt();
+            } while (orden!=1 && orden!=2);
+            
+            if (orden==1){
+                for (contador=num1;contador<=num2;contador++){
+                    System.out.print(contador+" ");
+                }
+            }
+            else{
+                for (contador=num2;contador>=num1;contador--){
+                    System.out.print(contador+" ");
+                }
+            }
+
             System.out.print("\n¿Quieres mostrar otra serie en base a dos números (s/n)? ");
             otro6=LeeTeclado.readStr();
         } while (otro6.equals("s"));
