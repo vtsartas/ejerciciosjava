@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ArrayMulti",
+            "request": "launch",
+            "mainClass": "tema7.ArrayMulti",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BucleAnidado",
+            "request": "launch",
+            "mainClass": "tema7.BucleAnidado",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Ejercicios2",
             "request": "launch",
             "mainClass": "ejercicios2.Ejercicios2",
