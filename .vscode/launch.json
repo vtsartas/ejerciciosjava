@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - HundirFlota",
+            "request": "launch",
+            "mainClass": "tema7.HundirFlota",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ArrayMultipleV2",
+            "request": "launch",
+            "mainClass": "tema7.ArrayMultipleV2",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ArrayMulti",
             "request": "launch",
             "mainClass": "tema7.ArrayMulti",
