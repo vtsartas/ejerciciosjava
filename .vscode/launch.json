@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - SortArray",
+            "request": "launch",
+            "mainClass": "tema7.SortArray",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - HundirFlota",
             "request": "launch",
             "mainClass": "tema7.HundirFlota",
