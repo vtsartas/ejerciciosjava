@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ListaClientes",
+            "request": "launch",
+            "mainClass": "tema7.ListaClientes",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ArrayListEJ",
+            "request": "launch",
+            "mainClass": "tema7.ArrayListEJ",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SortArray",
             "request": "launch",
             "mainClass": "tema7.SortArray",

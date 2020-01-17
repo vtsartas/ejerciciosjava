@@ -2,6 +2,7 @@ package tema7;
 
 import java.util.Scanner;
 
+
 public class LeeTeclado{
 
     // para poder abrir solo un Scanner y usarlo en toda la clase definimos un objeto de la clase de forma global
@@ -9,14 +10,14 @@ public class LeeTeclado{
     // Del mismo modo, solo cerraremos una vez el Scanner, también en el método 'main()' [sc.close();]
     private static Scanner sc;
 
-    // método para cerrar el Scanner (importante porque 'sc' es 'private')
-    public static void cierraSc() {
-        sc.close();
-    }
-
-    // método para abrir el Scanner (importante porque 'sc' es 'private')
+    // método para abrir el Scanner (importante porque 'sc' es 'private') (uso: LeeTeclado.iniSc();)
     public static void iniSc() {
         LeeTeclado.sc = new Scanner(System.in);
+    }
+
+    // método para cerrar el Scanner (importante porque 'sc' es 'private'). (uso: LeeTeclado.cierraSc();)
+    public static void cierraSc() {
+        sc.close();
     }
 
     // luego creamos métodos que usan el objeto creado para leer la consola y devolver el valor
