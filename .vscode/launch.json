@@ -5,6 +5,13 @@
             "name": "CodeLens (Launch) - ListaClientes",
             "request": "launch",
             "mainClass": "tema7.ListaClientes",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ListaClientes",
+            "request": "launch",
+            "mainClass": "tema7.ListaClientes",
             "projectName": "ejerciciosjava_19b102e6"
         },
         {

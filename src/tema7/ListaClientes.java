@@ -1,11 +1,8 @@
 package tema7;
 
 /* Programa para controlar lista de clientes, con opciones para
-    1. Añadir (pedir posición y nombre)
-    2. Borrar (pedir posición)
-    3. Listar clientes
-    4. Modificar (pedir pos.)
-    5. Salir
+        Añadir (pedir posición y nombre), Borrar (pedir posición)
+        Listar clientes, Modificar (pedir pos.), Salir... (añado buscar)
 
     el cliente será un objeto con argumentos NIF, nombre, apellido
  */
@@ -21,8 +18,6 @@ public class ListaClientes {
         int opcion=0;
 
         ArrayList<Cliente> listado=new ArrayList<Cliente>();
-
-        System.out.print("PROGRAMA DE GESTIÓN DE CLIENTES\n");
 
         do {
 
@@ -43,9 +38,21 @@ public class ListaClientes {
                     }
                     break;
                 case 3:
+                    if(listado.size()>0){
+                        borraCliente(listado);
+                    }
+                    else{
+                        System.out.print("No hay ningún cliente en la lista.");
+                    }
+                    
                     break;
                 case 4:
-                    listaCliente(listado);
+                    if(listado.size()>0){
+                        listaCliente(listado);
+                    }
+                    else{
+                        System.out.print("La lista está vacía.");
+                    }
                     break;
                 case 5:
                     break;    
@@ -66,17 +73,17 @@ public class ListaClientes {
         
         ArrayList<String> opciones=new ArrayList<String>();
 
-        System.out.print("¿Qué quieres hacer?\n");
+        System.out.println("\nGESTIÓN DE CLIENTES");
 
-        opciones.add("1. Añadir un cliente.\n");
-        opciones.add("2. Modificar un cliente.\n");
-        opciones.add("3. Borrar un cliente.\n");
-        opciones.add("4. Listar los clientes.\n");
-        opciones.add("5. Buscar un cliente.\n");
-        opciones.add("6. Salir del programa.\n");
+        opciones.add("1. Añadir un cliente.");
+        opciones.add("2. Modificar un cliente.");
+        opciones.add("3. Borrar un cliente.");
+        opciones.add("4. Listar los clientes.");
+        opciones.add("5. Buscar un cliente.");
+        opciones.add("6. Salir del programa.");
 
         for (int i=0;i<opciones.size();i++){
-            System.out.print(opciones.get(i));
+            System.out.println(opciones.get(i));
         }
 
 
@@ -177,9 +184,11 @@ public class ListaClientes {
         
         do {
 
-            Cliente clienteins=new Cliente("", "", "");
+            
 
             do{
+
+                Cliente clientemod=new Cliente("", "", "");
                 
                 listaCliente(lista);
 
@@ -196,25 +205,27 @@ public class ListaClientes {
 
                 System.out.print("\n");
                 System.out.print("Introduce el nuevo NIF del nuevo cliente: ");
-                clienteins.setNif(LeeTeclado.readStr());
+                clientemod.setNif(LeeTeclado.readStr());
                 System.out.print("Introduce el nuevo nombre del nuevo cliente: ");
-                clienteins.setNombre(LeeTeclado.readStr());
+                clientemod.setNombre(LeeTeclado.readStr());
                 System.out.print("Introduce los nuevos apellidos del nuevo cliente: ");
-                clienteins.setApellidos(LeeTeclado.readStr());
+                clientemod.setApellidos(LeeTeclado.readStr());
 
                 System.out.print("\nHas introducido estos nuevos datos:\n");
-                System.out.print("Posición: "+pos+" NIF: "+clienteins.getNif()+" Nombre: "+clienteins.getNombre()+" Apellidos: "+clienteins.getApellidos()+".\n");
+                System.out.print("Posición: "+pos+" NIF: "+clientemod.getNif()+" Nombre: "+clientemod.getNombre()+" Apellidos: "+clientemod.getApellidos()+".\n");
 
-                System.out.print("Si los datos son correctos se grabarán de forma definitiva sustituyendo los anteriores.\n¿SON CORRECTOS (s/n)");
+                System.out.print("Si los datos son correctos se grabarán de forma definitiva sustituyendo los anteriores.\n¿SON CORRECTOS (s/n)?");
                 correcto=LeeTeclado.readStr();
 
                 if (!(correcto.equals("s")||correcto.equals("S"))){
                     System.out.print("\nVuelve a introducir los datos.\n");
                 }
+                else{
+                    System.out.print("\nModificación guardada correctamente.\n");
+                    lista.set(pos,clientemod);
+                }
 
             }while(!(correcto.equals("s")||correcto.equals("S")));
-
-            lista.set(pos,clienteins);
             
             System.out.print("¿Quieres modificar los datos de otro cliente (s/n)? ");
             otromod=LeeTeclado.readStr();
@@ -222,6 +233,47 @@ public class ListaClientes {
         }while (otromod.equals("s")||otromod.equals("S"));
 
     } // fin de modificaCliente(ArrayList<Cliente> lista)
+
+    public static void borraCliente(ArrayList<Cliente> lista){
+        int pos;
+        String correcto="";
+        String otromod="";
+        
+        do {
+
+            listaCliente(lista);
+
+            do{
+                System.out.print("\n¿Qué cliente quieres eliminar (indica su número)?");
+                pos=LeeTeclado.readInt();
+
+                if(pos>=lista.size()){
+                    System.out.print("ERROR: La posición indicada es incorrecta. Introduce una entre 0 y "+(lista.size()-1));  
+                }
+            }while(pos>=lista.size());
+
+            System.out.println("Has solicitado la eliminación de este cliente: ");
+            listaCliente(lista,pos);
+
+            System.out.print("\n");
+
+            System.out.print("¿Está seguro de eliminarlo (s/n)?");
+            correcto=LeeTeclado.readStr();
+
+            if (correcto.equals("s")||correcto.equals("S")){
+                System.out.println("Cliente nº "+pos+" eliminado de forma correcta.");
+                lista.remove(pos);
+            }
+            else{
+
+            }
+            
+            System.out.println("¿Quieres eliminar los datos de otro cliente (s/n)? ");
+            otromod=LeeTeclado.readStr();
+
+        }while (otromod.equals("s")||otromod.equals("S"));
+
+    } // fin de borraCliente(ArrayList<Cliente> lista)
 
     
 } // fin de la clase principal
