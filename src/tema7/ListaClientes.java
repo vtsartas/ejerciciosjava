@@ -35,6 +35,12 @@ public class ListaClientes {
                     insertaCliente(listado);
                     break;
                 case 2:
+                    if(listado.size()>0){
+                        modificaCliente(listado);
+                    }
+                    else{
+                        System.out.print("No es posible modificar ya que el listado no tiene ninguna entrada.");
+                    }
                     break;
                 case 3:
                     break;
@@ -42,13 +48,15 @@ public class ListaClientes {
                     listaCliente(listado);
                     break;
                 case 5:
+                    break;    
+                case 6:
                     System.out.print("Saliendo del programa...");    
                     break;
                 default:
                     System.out.print("La opción introducida no es válida");
             }            
 
-        }while(opcion!=5);
+        }while(opcion!=6);
 
         LeeTeclado.cierraSc();
         
@@ -64,7 +72,8 @@ public class ListaClientes {
         opciones.add("2. Modificar un cliente.\n");
         opciones.add("3. Borrar un cliente.\n");
         opciones.add("4. Listar los clientes.\n");
-        opciones.add("5. Salir del programa.\n");
+        opciones.add("5. Buscar un cliente.\n");
+        opciones.add("6. Salir del programa.\n");
 
         for (int i=0;i<opciones.size();i++){
             System.out.print(opciones.get(i));
@@ -77,12 +86,25 @@ public class ListaClientes {
 
         String salida="";
 
-        System.out.print("\nHay "+lista.size()+" clientes listados.\n\n");
+        System.out.print("\nHay "+lista.size()+" clientes listados.\n");
         for (int i=0;i<lista.size();i++){
             salida="Cliente nº"+i+" NIF: "+lista.get(i).getNif()+" Nombre: "+lista.get(i).getNombre()+" ";
-            salida+="Apellidos: "+lista.get(i).getApellidos()+"\n";
+            salida+="Apellidos: "+lista.get(i).getApellidos()+"";
             System.out.print(salida);
+            System.out.print("\n");
+
         }
+
+    } // fin de listaCliente()
+
+    // sobrecarganmos el método listaCliente para mostrar un cliente concreto a partir de su posición
+    public static void listaCliente(ArrayList<Cliente> lista,int posicion){
+
+        String salida="";
+
+        salida="Cliente nº"+posicion+" NIF: "+lista.get(posicion).getNif()+" Nombre: "+lista.get(posicion).getNombre()+" ";
+        salida+="Apellidos: "+lista.get(posicion).getApellidos()+"\n";
+        System.out.print(salida);
 
     } // fin de listaCliente()
 
@@ -91,27 +113,29 @@ public class ListaClientes {
         String correcto="";
         String otroins="";
 
-        boolean salir,salirins;
-
-        Cliente clienteins=new Cliente("", "", "");
+        
         
         do {
 
-            salirins=false;
+            Cliente clienteins=new Cliente("", "", "");
 
             do{
-                
-                salir=false;
                 
                 listaCliente(lista);
 
                 if (lista.size()>0){
                     System.out.print("\n¿En qué posición quieres añadir el nuevo cliente?");
                     pos=LeeTeclado.readInt();
+                    if (pos>=lista.size()){
+                        System.out.print("\nEsa posición está vacía. El cliente se añadirá a continuación del último.");
+                        pos=lista.size();
+                    }
                 }
                 else{
+                    System.out.print("El listado está vacío. Este será el primer cliente.\n");
                     pos=0;
                 }
+                System.out.print("\n");
                 System.out.print("Introduce el NIF del nuevo cliente: ");
                 clienteins.setNif(LeeTeclado.readStr());
                 System.out.print("Introduce el nombre del nuevo cliente: ");
@@ -125,27 +149,79 @@ public class ListaClientes {
                 System.out.print("Si los datos son correctos se grabarán de forma definitiva.\n¿SON CORRECTOS (s/n)");
                 correcto=LeeTeclado.readStr();
 
-                if (correcto.equals("s")||correcto.equals("S")){
-                    salir=true;
-                }
-                else{
-                    System.out.print("Vuelve a introducir los datos.\n");
+                if (!(correcto.equals("s")||correcto.equals("S"))){
+                    System.out.print("\nVuelve a introducir los datos.\n");
                 }
 
-            }while(!salir);
+            }while(!(correcto.equals("s")||correcto.equals("S")));
 
-            lista.add(pos,clienteins);
+            if (pos>=lista.size()){
+                lista.add(clienteins);
+            }
+            else{
+                lista.add(pos,clienteins);
+            }
             
-            System.out.print("¿Quieres introducir otro nuevo cliente (s/n)? ");
+            System.out.print("¿Quieres introducir otro cliente nuevo (s/n)?");
             otroins=LeeTeclado.readStr();
 
-            if (otroins.equals("s")||otroins.equals("S")){
-                salirins=true;
-            }
+        }while (otroins.equals("s")||otroins.equals("S"));
 
-        }while (!salirins);
+    } // fin de insertaCliente(ArrayList<Cliente> lista)
 
-    }
+
+    public static void modificaCliente(ArrayList<Cliente> lista){
+        int pos;
+        String correcto="";
+        String otromod="";
+        
+        do {
+
+            Cliente clienteins=new Cliente("", "", "");
+
+            do{
+                
+                listaCliente(lista);
+
+                do{
+                    System.out.print("\n¿Qué cliente quieres modificar (indica su número)?");
+                    pos=LeeTeclado.readInt();
+
+                    if((pos+1)>lista.size()){
+                        System.out.print("ERROR: La posición indicada es incorrecta. Introduce una entre 0 y "+(lista.size()-1));  
+                    }
+                }while((pos+1)>lista.size());
+
+                listaCliente(lista,pos);
+
+                System.out.print("\n");
+                System.out.print("Introduce el nuevo NIF del nuevo cliente: ");
+                clienteins.setNif(LeeTeclado.readStr());
+                System.out.print("Introduce el nuevo nombre del nuevo cliente: ");
+                clienteins.setNombre(LeeTeclado.readStr());
+                System.out.print("Introduce los nuevos apellidos del nuevo cliente: ");
+                clienteins.setApellidos(LeeTeclado.readStr());
+
+                System.out.print("\nHas introducido estos nuevos datos:\n");
+                System.out.print("Posición: "+pos+" NIF: "+clienteins.getNif()+" Nombre: "+clienteins.getNombre()+" Apellidos: "+clienteins.getApellidos()+".\n");
+
+                System.out.print("Si los datos son correctos se grabarán de forma definitiva sustituyendo los anteriores.\n¿SON CORRECTOS (s/n)");
+                correcto=LeeTeclado.readStr();
+
+                if (!(correcto.equals("s")||correcto.equals("S"))){
+                    System.out.print("\nVuelve a introducir los datos.\n");
+                }
+
+            }while(!(correcto.equals("s")||correcto.equals("S")));
+
+            lista.set(pos,clienteins);
+            
+            System.out.print("¿Quieres modificar los datos de otro cliente (s/n)? ");
+            otromod=LeeTeclado.readStr();
+
+        }while (otromod.equals("s")||otromod.equals("S"));
+
+    } // fin de modificaCliente(ArrayList<Cliente> lista)
 
     
 } // fin de la clase principal

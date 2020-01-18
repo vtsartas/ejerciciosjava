@@ -5,6 +5,7 @@ public class Cliente{
     String nombre;
     String apellidos;
 
+    // método constructor
     public Cliente(String nif, String nombre, String apellidos) {
         this.nif = nif;
         this.nombre = nombre;
