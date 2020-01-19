@@ -55,7 +55,13 @@ public class ListaClientes {
                     }
                     break;
                 case 5:
-                    break;    
+                    if(listado.size()>0){
+                        buscaCliente(listado);
+                    }
+                    else{
+                        System.out.print("La lista está vacía.");
+                    }
+                    break;   
                 case 6:
                     System.out.print("Saliendo del programa...");    
                     break;
@@ -91,15 +97,9 @@ public class ListaClientes {
 
     public static void listaCliente(ArrayList<Cliente> lista){
 
-        String salida="";
-
-        System.out.print("\nHay "+lista.size()+" clientes listados.\n");
+        System.out.print("\nHay "+lista.size()+" clientes en el listado.\n");
         for (int i=0;i<lista.size();i++){
-            salida="Cliente nº"+i+" NIF: "+lista.get(i).getNif()+" Nombre: "+lista.get(i).getNombre()+" ";
-            salida+="Apellidos: "+lista.get(i).getApellidos()+"";
-            System.out.print(salida);
-            System.out.print("\n");
-
+            listaCliente(lista,i);
         }
 
     } // fin de listaCliente()
@@ -110,17 +110,15 @@ public class ListaClientes {
         String salida="";
 
         salida="Cliente nº"+posicion+" NIF: "+lista.get(posicion).getNif()+" Nombre: "+lista.get(posicion).getNombre()+" ";
-        salida+="Apellidos: "+lista.get(posicion).getApellidos()+"\n";
-        System.out.print(salida);
+        salida+="Apellidos: "+lista.get(posicion).getApellidos();
+        System.out.println(salida);
 
     } // fin de listaCliente()
 
     public static void insertaCliente(ArrayList<Cliente> lista){
-        int pos;
+        int pos=lista.size()+1;
         String correcto="";
         String otroins="";
-
-        
         
         do {
 
@@ -132,7 +130,9 @@ public class ListaClientes {
 
                 if (lista.size()>0){
                     System.out.print("\n¿En qué posición quieres añadir el nuevo cliente?");
+
                     pos=LeeTeclado.readInt();
+
                     if (pos>=lista.size()){
                         System.out.print("\nEsa posición está vacía. El cliente se añadirá a continuación del último.");
                         pos=lista.size();
@@ -184,8 +184,6 @@ public class ListaClientes {
         
         do {
 
-            
-
             do{
 
                 Cliente clientemod=new Cliente("", "", "");
@@ -234,6 +232,7 @@ public class ListaClientes {
 
     } // fin de modificaCliente(ArrayList<Cliente> lista)
 
+    
     public static void borraCliente(ArrayList<Cliente> lista){
         int pos;
         String correcto="";
@@ -274,6 +273,49 @@ public class ListaClientes {
         }while (otromod.equals("s")||otromod.equals("S"));
 
     } // fin de borraCliente(ArrayList<Cliente> lista)
+
+
+    public static void buscaCliente(ArrayList<Cliente> lista){
+        int i;
+        boolean vacio;
+        ArrayList<Integer> encontrado=new ArrayList<Integer>();
+        String texto="";
+        String otrobus="";
+        
+        do {
+
+            Cliente clientebus=new Cliente("", "", "");
+
+            System.out.print("\nIntroduce un texto para localizar al cliente o clientes: ");
+            texto=LeeTeclado.readStr();
+            vacio=true;
+
+            for (i=0;i<lista.size();i++){
+                clientebus=lista.get(i);
+                if ((clientebus.nif.contains(texto))||(clientebus.nombre.contains(texto))||(clientebus.apellidos.contains(texto))){
+                    encontrado.add(i);
+                    vacio=false;
+                }
+            }
+
+            if (vacio){
+                System.out.println("No se encontró ningún cliente con ese texto.");
+            }
+            else{
+                System.out.println("Cliente/s encontrados con ese texto: ");
+                for (i=0;i<encontrado.size();i++){
+                    listaCliente(lista, encontrado.get(i));
+                }
+            }
+            
+            encontrado.clear(); // una vez mostrados los resultados reseteamos el array donde guardamos los resultados
+
+            System.out.println("¿Quieres hacer otra búsqueda? ");
+            otrobus=LeeTeclado.readStr();
+
+        }while (otrobus.equals("s")||otrobus.equals("S"));
+
+    } // fin de buscaCliente(ArrayList<Cliente> lista)
 
     
 } // fin de la clase principal

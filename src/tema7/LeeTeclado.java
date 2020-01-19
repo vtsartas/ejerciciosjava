@@ -23,7 +23,22 @@ public class LeeTeclado{
     // luego creamos métodos que usan el objeto creado para leer la consola y devolver el valor
     // será necesario uno por cada tipo de datos que vayamos a necesaitar. P.ej, este es para leer enteros
     public static int readInt() {
-        return sc.nextInt();
+        
+        int valor=0;
+        boolean lecturaOK=false;
+        do{
+            try{
+                valor=Integer.parseInt(readStr().trim());
+                lecturaOK=true;
+            }
+            catch (NumberFormatException nfe)
+            {
+                System.out.println("Error. Introduce un valor entero: ");
+            }
+        }while(!lecturaOK);
+
+        return valor;
+
     }
 
     // Este es para leer String
