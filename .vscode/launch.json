@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MasClientes",
+            "request": "launch",
+            "mainClass": "tema7.MasClientes",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ListaClientes",
             "request": "launch",
             "mainClass": "tema7.ListaClientes",
