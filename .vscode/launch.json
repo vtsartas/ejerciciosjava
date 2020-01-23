@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - NumeraClientes",
+            "request": "launch",
+            "mainClass": "tema8.NumeraClientes",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LectEscriFich",
+            "request": "launch",
+            "mainClass": "tema8.LectEscriFich",
+            "projectName": "ejerciciosjava_986ea8a2"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MasClientes",
             "request": "launch",
             "mainClass": "tema7.MasClientes",
