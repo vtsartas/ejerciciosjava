@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - MediaEstaciones",
+            "request": "launch",
+            "mainClass": "examen2ijmv.MediaEstaciones",
+            "projectName": "ejerciciosjava_19b102e6"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Examen2",
+            "request": "launch",
+            "mainClass": "tema8.Examen2",
+            "projectName": "ejerciciosjava_19b102e6"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - NumeraClientes",
             "request": "launch",
             "mainClass": "tema8.NumeraClientes",
