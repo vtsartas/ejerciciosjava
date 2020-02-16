@@ -2,6 +2,139 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Agenda",
+            "request": "launch",
+            "mainClass": "basesdatos.Agenda",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MostrarTabla",
+            "request": "launch",
+            "mainClass": "basesdatos.MostrarTabla",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Actualizar",
+            "request": "launch",
+            "mainClass": "basesdatos.Actualizar",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Eliminar",
+            "request": "launch",
+            "mainClass": "basesdatos.Eliminar",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Insertar",
+            "request": "launch",
+            "mainClass": "basesdatos.Insertar",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CrearTabla",
+            "request": "launch",
+            "mainClass": "basesdatos.CrearTabla",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Conexion",
+            "request": "launch",
+            "mainClass": "basesdatos.Conexion",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Download2",
+            "request": "launch",
+            "mainClass": "tema8.Download2",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Download1",
+            "request": "launch",
+            "mainClass": "tema8.Download1",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PagWeb2",
+            "request": "launch",
+            "mainClass": "tema8.PagWeb2",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PagWeb",
+            "request": "launch",
+            "mainClass": "tema8.PagWeb",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - NumeraClientes",
+            "request": "launch",
+            "mainClass": "tema8.NumeraClientes",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ficheros2",
+            "request": "launch",
+            "mainClass": "tema8.Ficheros2",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CrearDirectorio2",
+            "request": "launch",
+            "mainClass": "tema8.CrearDirectorio2",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - crearDirectorios",
+            "request": "launch",
+            "mainClass": "profesor.tema8.crearDirectorios",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CrearDirectorio1",
+            "request": "launch",
+            "mainClass": "tema8.CrearDirectorio1",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Agenda",
+            "request": "launch",
+            "mainClass": "tema8.Agenda",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Ficheros5",
+            "request": "launch",
+            "mainClass": "tema8.Ficheros5",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ListaClientes_v2",
+            "request": "launch",
+            "mainClass": "tema7.ListaClientes_v2",
+            "projectName": "ejerciciosjava_7df9b1af"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - MediaEstaciones",
             "request": "launch",
             "mainClass": "examen2ijmv.MediaEstaciones",

@@ -4,15 +4,12 @@ package tema7;
         Añadir (pedir posición y nombre), Borrar (pedir posición)
         Listar clientes, Modificar (pedir pos.), Salir... (añado buscar)
 
-    el cliente será un objeto con argumentos NIF, nombre, apellido (y edad)
-
-    En esta segunda versión añadiremos el atributo edad a los clientes y
-    añadiremos la opción de averiguar la media de sus edades.
+    el cliente será un objeto con argumentos NIF, nombre, apellido
  */
 
 import java.util.ArrayList;
 
-public class ListaClientes {
+public class ListaClientes_v2 {
 
     public static void main(String[] args) {
 
@@ -54,7 +51,7 @@ public class ListaClientes {
                         listaCliente(listado);
                     }
                     else{
-                        System.out.print("La lista de clientes está vacía.");
+                        System.out.print("La lista está vacía.");
                     }
                     break;
                 case 5:
@@ -62,17 +59,17 @@ public class ListaClientes {
                         buscaCliente(listado);
                     }
                     else{
-                        System.out.print("La lista de clientes está vacía.");
+                        System.out.print("La lista está vacía.");
                     }
-                    break;  
+                    break;
                 case 6:
                     if(listado.size()>0){
-                        buscaCliente(listado);
+                        mediaedadCliente(listado);
                     }
                     else{
-                        System.out.print("La lista de clientes está vacía.");
+                        System.out.print("La lista está vacía.");
                     }
-                    break; 
+                    break;  
                 case 7:
                     System.out.print("Saliendo del programa...");    
                     break;
@@ -333,6 +330,20 @@ public class ListaClientes {
         }while (otrobus.equals("s")||otrobus.equals("S"));
 
     } // fin de buscaCliente(ArrayList<Cliente> lista)
+
+
+        // cálculo de la media de edad de los clientes
+        public static void mediaedadCliente(ArrayList<Cliente> lista){
+            int sumaedades=0;
+            int numeroclientes=lista.size();
+            
+            for (int i=0;i<numeroclientes;i++){
+                sumaedades+=lista.get(i).getEdad();
+            }
+            double media=(double)sumaedades/(double)numeroclientes;
+            System.out.printf("\nLa media de edad de los %d clientes es de %.2f años.\n",numeroclientes,media);
+    
+        } // fin de mediaedadCliente()
 
     
 } // fin de la clase principal

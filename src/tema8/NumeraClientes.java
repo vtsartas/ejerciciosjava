@@ -5,14 +5,13 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.BufferedReader;
 
-/**
- * ficheros
- */
+/* corresponde con Ficheros2 */
+
 public class NumeraClientes {
 
     public static void main(String[] args) {
-        String nomfichero="c:\\datos\\Clientes.txt";
-        String nuevofichero="c:\\datos\\ClientesNumerados.txt";
+        String nomfichero="c:\\pruebas\\Clientes.txt";
+        String nuevofichero="c:\\pruebas\\ClientesNumeradosIMV.txt";
         numerar(nomfichero,nuevofichero);
 
     } // fin del main()
