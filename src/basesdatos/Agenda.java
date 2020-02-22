@@ -16,15 +16,12 @@ public class Agenda {
         LeeTeclado.iniSc();
 
         int opcion;
-        
-        ArrayList<Contacto> listaContactos;
-        Contacto contacto;
+
         // abrir conexión a la base de datos
         
         BBDD basededatos=new BBDD("mysql", "remotemysql.com", 3306, "nbgLStOY8W", "nbgLStOY8W", "DrifWtYlGz");
 
         Connection conexion=BDUtils.Conecta(basededatos);
-
 
         if (conexion != null) {
             
@@ -35,18 +32,16 @@ public class Agenda {
                 //
                 switch (opcion) {
                     case 1:
-                        contacto = BDUtils.pedirContacto();
-                        BDUtils.alta(conexion,contacto);   
+                        BDUtils.alta(conexion);   
                         break;
                     case 2:
                         BDUtils.baja(conexion);
                         break;
                     case 3:
-                        BDUtils.modificacion();
+                        BDUtils.modificacion(conexion);
                         break;
                     case 4:
-                        listaContactos = BDUtils.consulta(conexion);
-                        BDUtils.escribirResultados(listaContactos);
+                        BDUtils.escribirResultados(BDUtils.consulta(conexion));
                         break;
                     case 0:
                         break;
@@ -55,8 +50,6 @@ public class Agenda {
                 }
     
             } while (opcion != 0);
-            
-         
 
         } else {
             System.out.println("Error al conectar a la base de datos");
