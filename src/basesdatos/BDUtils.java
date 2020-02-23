@@ -127,7 +127,7 @@ public class BDUtils {
     // modificacion
     public static void modificacion(Connection con) {
 
-        System.out.println("Indica el número del registro que quieres eliminar: ");
+        System.out.println("Indica el número del registro que deseas modificar: ");
         int registro=LeeTeclado.readInt();
 
         do{
@@ -148,7 +148,7 @@ public class BDUtils {
 
         System.out.println("Ahora indica lo que quieres modificar, pulsa INTRO si no quieres cambiarlo: ");
         Contacto contacto;
-        contacto=pedirContacto();
+        contacto=pedirContacto(registro);
 
         String querysql="";
             try {
@@ -250,7 +250,7 @@ public class BDUtils {
             codigo = contacto.getCodigo();
             nombre = contacto.getNombre();
             telefono = contacto.getTelefono();
-            System.out.println(codigo + ": " + nombre + " --> " + telefono);
+            System.out.println("Código: "+codigo + " - Nombre: " + nombre + " - Teléfono: " + telefono);
         }
     } // fin de scribirResultados(ArrayList<Contacto> listaContactos)
 
@@ -264,6 +264,16 @@ public class BDUtils {
         contact.setTelefono(LeeTeclado.readStr());
 		return contact;
     } // fin de pedirContacto()
+
+    public static Contacto pedirContacto(int registro) {
+        Contacto contact=new Contacto(registro,"","");
+        // contact.setCodigo(registro);
+        System.out.println("Introduce el nombre a guardar: ");
+        contact.setNombre(LeeTeclado.readStr());
+        System.out.println("Introduce el teléfono: ");
+        contact.setTelefono(LeeTeclado.readStr());
+		return contact;
+    } // fin de pedirContacto(int registro)
     
     public static boolean existeCodigo(Connection con, int codigo) {
         boolean resultado = false;

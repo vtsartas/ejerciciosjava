@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AgendaGui",
+            "request": "launch",
+            "mainClass": "basesdatos.AgendaGui",
+            "projectName": "ejercicios"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Agenda",
             "request": "launch",
             "mainClass": "basesdatos.Agenda",

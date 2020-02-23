@@ -23,8 +23,8 @@ public class Ejercicio2 {
                     mensaje="El carácter indicado ("+caracter+") está en minúsculas.\n";
                 } */
 
-                // también se puede hacer viendo si está en el rango de caracteres pertiente
-                if (((car>='A')&&(car<='Z'))||(car=='Ñ')){
+                // también se puede hacer viendo si est� en el rango de caracteres pertiente
+                if (((car>='A')&&(car<='Z'))||(car=='�')){
                     mensaje="El carácter indicado ("+caracter+") está en MAYÚSCULAS.\n";
                 }
                 else{

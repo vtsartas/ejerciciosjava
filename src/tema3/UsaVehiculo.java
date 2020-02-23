@@ -1,6 +1,6 @@
 package tema3;
 
-import tema3.Vehiculo;
+// import tema3.Vehiculo;
 
 public class UsaVehiculo{
     

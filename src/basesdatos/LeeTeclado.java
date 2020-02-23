@@ -1,5 +1,7 @@
 package basesdatos;
 
+import java.io.InputStreamReader;
+// import java.nio.charset.Charset;
 import java.util.Scanner;
 
 
@@ -12,7 +14,11 @@ public class LeeTeclado{
 
     // método para abrir el Scanner (importante porque 'sc' es 'private') (uso: LeeTeclado.iniSc();)
     public static void iniSc() {
-        LeeTeclado.sc = new Scanner(System.in,"UTF-8");
+        try {
+            LeeTeclado.sc = new Scanner(new InputStreamReader(System.in, "UTF-8"));
+        } catch (Exception e) {
+            System.out.println("ERROR: " + e.getMessage());
+        }
     }
 
     // método para cerrar el Scanner (importante porque 'sc' es 'private'). (uso: LeeTeclado.cierraSc();)
@@ -43,7 +49,9 @@ public class LeeTeclado{
 
     // Este es para leer String
     public static String readStr() {
-        return sc.next();
+        String linea="";       
+        linea=sc.nextLine();
+        return linea;
     } // fin de readStr
 
     // sobrecarga para poder devolver texto en mayúsculas o minúsculas
